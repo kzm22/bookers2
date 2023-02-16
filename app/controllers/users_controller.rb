@@ -1,15 +1,17 @@
 class UsersController < ApplicationController
   def new
   end
-  
+
   def index
-    @user = User.all
+    @user = current_user
+    @users = User.all
   end
+  
+
 
   def show
     @user = User.find(params[:id])
     @users = User.all
-    @user_images = @user.user_images
   end
 
   def edit

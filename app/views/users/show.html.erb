@@ -1,18 +1,20 @@
-<h1>User info</h1>
-  <div>
-    <%= image_tag @user.get_profile_image(100,100) %>
-  </div>
-  <p>name:<%= link_to user.name,user_path(user.id) %></p>
-  <p>introduction:<%= link_to user.introduction, user_path(user.id) %></p>
+<!--h1>User info</h1-->
+  <!--% if @user.image.attached? %-->
+    <!--%= image_tag @user.get.image,size:"100x100" %-->
+  <!--% else %-->
+    <!--%= image_tag'no_image',size:"100x100" %-->
+  <!--% end %-->
+  <!--p>name:<!--%= link_to user.name,user_path(user.id) %--></p-->
+  <!--p>introduction:<!--%= link_to user.introduction, user_path(user.id) %--></p-->
 
 
-<h1>New Book</h1>
-<%= form_with model:@book do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
+<!--h1>New Book</h1-->
+<!--%= form_with model:@book do |f| %-->
+  <!--h4>Title</h4-->
+  <!--%= f.text_field :title %-->
 
-  <h4>Opinion</h4>
-  <%= f.text_area :body %>
+  <!--h4>Opinion</h4-->
+  <!--%= f.text_area :body %-->
 
-  <%= f.submit 'Create Book' %>
-<% end %>
+  <!--%= f.submit 'Create Book' %-->
+<!--% end %-->
