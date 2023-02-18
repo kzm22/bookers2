@@ -1,12 +1,27 @@
-<h1>User info</h1>
 
-<%= form_with model: @user,url:'/users' do |f| %>
-<p>Name</p>
-<%= f.text_field :name %>
-<p>Image</p>
-<%= f.file_field :image,accept: "image/*" %>
-<p>Introduction</p>
-<%= f.text_area :introduction ,maxlength: "50" %>
-<%= f.submit 'Update User' %>
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+        <h2>User info</h2>
+        <%= form_with model: @user,url:'/users' do |f| %>
+        <div class = "form-group">
+          <label for = "user_name">Name</label>
+          <%= f.text_field :name %>
+        </div>
+        <div class = "form-group">
+          <label for = "user_image">Image</label>
+          <%= f.file_field :image,accept: "image/*" %>
+        </div>
+        <div class = "form-group">
+          <label for = "user_introducion">Introduction</label>
+          <%= f.text_area :introduction ,maxlength: "50" %>
+        </div>
+        <div class = "form-group">
+          <%= f.submit 'Update User' %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<% end %>
+
