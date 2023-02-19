@@ -3,12 +3,18 @@
       <h2>Books</h2>
       <table class = "table table-hover table-inverse">
         <thead>
-          <th></th>
+          <th colspan = "2"></th>
           <th>Title</th>
           <th>Opinion</th>
-          <th colspan = "3"></th>
         </thead>
-        <body></body>
+        <tbody>
+          <tr>
+            <td><%= image_tag @user.get_profile_image(100,100) %></td>
+            <td></td>
+            <td><%= @book.title %></td>
+            <td><%= @book.body %></td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
