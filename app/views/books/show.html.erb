@@ -5,13 +5,13 @@
         <tbody>
           <tr>
             <td><%= image_tag @user.get_profile_image(100,100) %><br>
-            <%= @user.name %></td>
+            <%= link_to @user.name, "/users/#{@user.id}" %></td>
             <td></td>
             <td><%= @book.title %></td>
             <td><%= @book.body %></td>
             <% if @book.user == current_user %>
             <td><%= link_to "Edit",edit_book_path(@book) %></td>
-            <td><%= link_to "Destroy",book_path(@book),method: :delete %></td>
+            <td><%= link_to "Destroy",book_path(@book),method: :delete, "data-confirm" => "本当に消しますか？"%></td>
             <% end %>
           </tr>
         </tbody>
