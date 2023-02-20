@@ -10,9 +10,9 @@
         <% @users.each do |user| %>
         <tbody>
           <tr>
-            <td><%= image_tag @user.get_profile_image(100,100) %></td>
-            <td><%= @user.name %></td>
-            <td><%= link_to "Show",url: user_path(@user.id),method: :get %></td>
+            <td><%= image_tag user.get_profile_image(100,100) %></td>
+            <td><%= user.name %></td>
+            <td><%= link_to "Show",url: user_path(user),method: :get %></td>
           </tr>
         </tbody>
         <% end %>
