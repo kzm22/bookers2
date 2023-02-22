@@ -7,7 +7,7 @@
             <td><%= image_tag @user.get_profile_image(100,100) %><br>
             <%= link_to @user.name, "/users/#{@user.id}" %></td>
             <td></td>
-            <td><%= @book.title %></td>
+            <td><%= link_to @book.title, "/books/#{@book.id}" %></td>
             <td><%= @book.body %></td>
             <% if @book.user == current_user %>
             <td><%= link_to "Edit",edit_book_path(@book) %></td>
