@@ -24,6 +24,7 @@
             <ul class = "navbar-nav ml-auto">
             <% if user_signed_in? %>
             <li class ="nav-item">
+              <i class="fas fa-home"></i>
               <%= link_to 'Home',user_path(current_user.id),class: 'nav-link text-light' %>
             </li>
             <li class ="nav-item">
@@ -37,16 +38,28 @@
             </li>
             <% else %>
             <li class ="nav-item">
-              <%= link_to 'Home',href="/",class: 'nav-link text-light' %>
+              <%= link_to root_path do %>
+              <span class = 'nav-link text-light' >
+                <i class="fas fa-home"></i>Home</span>
+              <% end %>
             </li>
             <li class ="nav-item">
-              <%= link_to 'About',href="/homes/about",class: 'nav-link text-light' %>
+              <%= link_to about_path do %>
+              <span class = 'nav-link text-light'>
+                <i class = "fas fa-link"></i>About</span>
+              <% end %>
             </li>
             <li>
-              <%= link_to "Sign up",new_user_registration_path,class: 'nav-link text-light' %>
+              <%= link_to new_user_registration_path do %>
+              <span class = 'nav-link text-light'>
+                <i class = "fas fa-user-plus"></i>Sign up</span>
+              <% end %>
             </li>
             <li>
-              <%= link_to "Log in",new_user_session_path,class: 'nav-link text-light' %>
+              <%= link_to new_user_session_path do %>
+              <span class = 'nav-link text-light'>
+                <i class = "fas fa-sign-in-alt"></i>Log in</span>
+              <% end %>
             </li>
             <% end %>
             </ul>
