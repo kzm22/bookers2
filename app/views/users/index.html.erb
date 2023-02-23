@@ -7,8 +7,8 @@
           <th>name</th>
           <th></th>
         </thead>
-        <% @users.each do |user| %>
         <tbody>
+        <% @users.each do |user| %>
           <tr>
             <td>
               <% if user.profile_image.present? %>
@@ -18,10 +18,10 @@
               <% end %>
             </td>
             <td><%= user.name %></td>
-            <td><%= link_to "Show",url: user_path(user),method: :get %></td>
+            <td><%= link_to "Show", user_path(user) %></td>
           </tr>
-        </tbody>
         <% end %>
+        </tbody>
       </table>
     </div>
   </div>
